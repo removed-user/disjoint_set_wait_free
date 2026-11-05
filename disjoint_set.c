@@ -15,6 +15,9 @@ C implementation by Elazar Gershuni
 The algorithm uses addresses as identity of nodes, and takes advantage on the natural ordering of pointers.
 
 The correctness, linerizability and termination depends on keeping `n->p >= &n`.
+AKA: Ensure that tree roots are reachable and loops are impossible by forcing parent nodes to sit at equal or higher memory addresses than their children - in oder to avoid a fucky-wucky
+
+
 
 The asymptotic efficiency (inverse Ackerman with some parameters; constant for all practical purposes) depends on the order between addresses of nodes be independent from the calls to the API.
 This is most likely the case in practice. Allocating the nodes from pools using random() can help to make sure it is.
