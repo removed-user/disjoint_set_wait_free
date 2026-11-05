@@ -21,6 +21,14 @@ AKA: Ensure that tree roots are reachable and loops are impossible by forcing pa
 
 The asymptotic efficiency (inverse Ackerman with some parameters; constant for all practical purposes) depends on the order between addresses of nodes be independent from the calls to the API.
 This is most likely the case in practice. Allocating the nodes from pools using random() can help to make sure it is.
+
+__attribute__ ((unused))
+"I know this function or variable isn't being used right now, so do not give me a warning about it
+
+
+
+
+
 */
 
 // TODO: Verify that the side-effect of failed compare_exchange is not harmful
